@@ -2,8 +2,9 @@
 
 interface IAnimal {
   nome: string
+  /* Exemplo utilizando operador ? que declara que essa variável pode ser opcional */
   /* com o pipe é informado que essa propriedade terá um valor ou outro*/
-  tipo: 'terrestre' | 'aquático'
+  tipo?: 'terrestre' | 'aquático'
   /* é possível criar funções dentro de uma interface */
   executarRugido(decibeis: number): void
 }
@@ -14,7 +15,7 @@ const animal: IAnimal = {
   tipo: 'terrestre',
   executarRugido: (decibeis) => (
     `${decibeis}dB`
-    ),
+  ),
 }
 
 /* Herança de interfaces */
@@ -28,6 +29,6 @@ const felino: IFelino = {
   tipo: 'terrestre',
   executarRugido: (decibeis) => (
     `${decibeis}dB`
-    ),
+  ),
   visaoNoturna: true
 }
