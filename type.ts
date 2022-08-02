@@ -26,12 +26,18 @@ const pj: IMei = {
 
 /* Exemplo de type com elemento HTML */
 
-const input = document.getElementById('input') as HTMLInputElement
+let button = document.getElementById('btn')
+let input1 = document.getElementById('i1') as HTMLInputElement
+let input2 = document.getElementById('i2') as HTMLInputElement
 
-input.addEventListener('input', (event) => {
-  const i = event.currentTarget as HTMLInputElement
-  console.log(i.value)
+const somar = (num1: number, num2: number) => num1 + num2
+
+if (button) {
+button.addEventListener('click', () => {
+  if (input1 && input2)
+  console.log(somar(Number(input1.value), Number(input2.value)))
 })
+}
 
 /* Generic type */
 
